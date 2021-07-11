@@ -24,7 +24,7 @@ def Extract_time(str_created_time, str_current_time):
     count3 = ((24 - int(d1)) + int(d1))
     count4 = ((60 - int(e1)) + int(e2))
     count5 = ((60 - int(f1)) + int(f2))
-    result = (count2 - count1, "days")
+    result = ("'%d' days" %(count2 - count1))
     print("hrs", count3, end=" : ")
     print("min", count4, end=" : ")
     print("sec", count5)
@@ -34,7 +34,8 @@ def main():
     str_created_time = "2018-05-10T10:30:07.119045211Z"
     str_current_time = "2020-12-29T10:30:07.119045211Z"
     
-    Extract_time(str_created_time, str_current_time)
+    diff_time = Extract_time(str_created_time, str_current_time)
+    print("difference time:", diff_time)
 
 if(__name__ == "__main__"):
     main()
